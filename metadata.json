@@ -1,0 +1,6 @@
+{
+  "name": "Analisador Judicial - Violência Doméstica",
+  "description": "Plataforma integrada de violência doméstica: módulo analítico 'VD em números', repositório de legislação atualizada do Powerlex, jurisprudência, doutrina e diretório geográfico de contactos úteis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

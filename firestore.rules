@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Decisões anonimizadas
+    match /decisoes_vd/{decisaoId} {
+      allow read, write: if true;
+    }
+    // Mapeamento confidencial entre número de processo e ID sequencial
+    match /processo_mappings/{mappingId} {
+      allow read, write: if true;
+    }
+    // Metadados e contadores sequenciais
+    match /system_metadata/{metaId} {
+      allow read, write: if true;
+    }
+    // Legislação sobre violência doméstica e fila de validação
+    match /legislacao_vd/{diplomaId} {
+      allow read, write: if true;
+    }
+    match /legislacao_pendente_vd/{diplomaId} {
+      allow read, write: if true;
+    }
+    // Doutrina e referências bibliográficas e fila de validação
+    match /doutrina_vd/{doutrinaId} {
+      allow read, write: if true;
+    }
+    match /doutrina_pendente_vd/{doutrinaId} {
+      allow read, write: if true;
+    }
+    // Contactos úteis e rede de apoio
+    match /contactos_uteis_vd/{contactoId} {
+      allow read, write: if true;
+    }
+    // Jurisprudência
+    match /jurisprudencia_vd/{acordaoId} {
+      allow read, write: if true;
+    }
+  }
+}

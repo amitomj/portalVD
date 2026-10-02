@@ -1,0 +1,53 @@
+{
+  "entities": {
+    "DecisaoJudicialVD": {
+      "properties": {
+        "id": { "type": "string" },
+        "seqId": { "type": "string" },
+        "seqNumber": { "type": "number" },
+        "dataDecisao": { "type": "string" },
+        "tribunal": { "type": "string" }
+      }
+    },
+    "DiplomaLegislativo": {
+      "properties": {
+        "id": { "type": "string" },
+        "tipo": { "type": "string" },
+        "numero": { "type": "string" },
+        "titulo": { "type": "string" },
+        "emVigor": { "type": "boolean" }
+      }
+    },
+    "ReferenciaDoutrinaria": {
+      "properties": {
+        "id": { "type": "string" },
+        "autores": { "type": "string" },
+        "nomeObra": { "type": "string" },
+        "nomeEditora": { "type": "string" },
+        "anoEdicao": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "decisoes_vd": {
+      "schema": "DecisaoJudicialVD",
+      "description": "Decisões judiciais anonimizadas sobre violência doméstica"
+    },
+    "legislacao_vd": {
+      "schema": "DiplomaLegislativo",
+      "description": "Diplomas legislativos estruturantes e complementares"
+    },
+    "legislacao_pendente_vd": {
+      "schema": "DiplomaLegislativo",
+      "description": "Diplomas legislativos extraídos de documentos pendentes de validação"
+    },
+    "doutrina_vd": {
+      "schema": "ReferenciaDoutrinaria",
+      "description": "Obras doutrinárias e artigos científicos validados"
+    },
+    "doutrina_pendente_vd": {
+      "schema": "ReferenciaDoutrinaria",
+      "description": "Obras e artigos extraídos de documentos ou recolhidos na web pendentes de validação"
+    }
+  }
+}
